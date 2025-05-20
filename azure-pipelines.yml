@@ -41,6 +41,15 @@ steps:
   displayName: 'Write build info'
   workingDirectory: $(wwwrootDir)
 
+
+# ✅ Restore NuGet packages (NEW)
+- task: DotNetCoreCLI@2
+  displayName: 'Restore NuGet packages'
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+
+
 # Build the .NET project
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
