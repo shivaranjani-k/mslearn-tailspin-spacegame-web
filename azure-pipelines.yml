@@ -42,7 +42,7 @@ steps:
   workingDirectory: $(wwwrootDir)
 
 
-# ✅ Restore NuGet packages (NEW)
+# Restore NuGet packages (NEW)
 - task: DotNetCoreCLI@2
   displayName: 'Restore NuGet packages'
   inputs:
